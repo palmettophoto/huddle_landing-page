@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+
+/* font-family: 'Open Sans', sans-serif;
+font-family: 'Poppins', sans-serif; */
+:root {
+--violet: hsl(257, 40%, 49%);
+--magenta: hsl(300, 69%, 71%);
+}
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+main {
+    background-color: black;
+}
+.container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+.card {
+    max-width: 1440px;
+    height: 80vh;
+    background-color: var(--violet);
+    background-image: url('./images/bg-desktop.svg');
+    display: grid;
+    grid-template-columns: '1fr 1fr';
+    grid-template-rows: "1fr 5fr 1fr";
+    grid-template-areas:
+    "header . "
+    "hero card_info"
+    ". footer";
+    grid-column-gap: 4%;
+    padding: 4%;
+    color: white;
+}
+
+header {
+    grid-area: header;
+    margin-bottom: 10%;
+}
+.hero {
+    grid-area: hero;
+
+}
+.card_info {
+    grid-area: card_info;
+   padding: 2rem;
+}
+footer {
+    grid-area: footer;
+}
+
+header img {
+    width: 200px;
+}
+h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    line-height: 3.5rem;
+    margin-bottom: 5%;
+}
+p {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.8rem;
+    margin-bottom: 2.5rem;
+}
+.card_button {
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    color: var(--violet);
+    background-color: white;
+    border-radius: 25px;
+    padding: 3% 15%;
+    box-shadow: 3px 5px 10px rgba(57, 57, 57, 0.9);
+}
+.card_button:hover {
+    background-color: var(--magenta);
+    color: white;
+}
+footer {
+display: flex;
+justify-content: flex-end;
+}
+i {
+    margin-left: 25px;
+}
+i:hover {
+    color: var(--magenta);
+    cursor: pointer;
+}
+
+/* Mobile  */
+
+@media (max-width: 600px) {
+
+    .card {
+    background-image: url('./images/bg-mobile.svg');
+    background-repeat: no-repeat;
+    grid-template-columns: '1fr';
+    grid-template-rows: "1fr";
+    grid-template-areas:
+    "header"
+    "hero"
+    "card_info"
+    "footer";
+    min-width: 375px;
+    height: 100vh;
+    text-align: center;
+    padding: 5%;
+    }
+    header {
+        text-align: left;
+        
+    }
+    header img {
+        width: 150px;
+    }
+    .hero img {
+        width: 90vw;
+    }
+
+    footer {
+        justify-content: center;
+    }
+}
