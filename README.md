@@ -10,8 +10,9 @@ This is a solution to the [Huddle landing page with single introductory section 
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Add solution URL here](https://github.com/palmettophoto/huddle_landing-page/)
+- Live Site URL: [Add live site URL here](https://palmettophoto.github.io/huddle_landing-page/;
+)
 
 ## My process
 
